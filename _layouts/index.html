@@ -1,0 +1,30 @@
+---
+layout: index
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+
+<body>
+  <div id='header'>
+    {% for post in site.posts %}  
+      <div class="en">
+        <h2>{{ post.title }}</h2>
+        <h2>{{ post.nextmeetup }}</h2>
+        <h2>{{ post.about }}</h2>
+        <h2>{{ post.what }}</h2>
+      </div>
+    	<div class='cn'>
+    	  <h2>{{ post.title-cn }}</h2>
+        <h2>{{ post.nextmeetup-cn }}</h2>
+        <h2>{{ post.about-cn }}</h2>
+        <h2>{{ post.what-cn }}</h2>
+      </div>
+    {% endfor %}
+  </div>
+  
+  <div id="container">
+  </div>
+</body>
+</html>
