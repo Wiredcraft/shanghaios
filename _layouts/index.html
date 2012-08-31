@@ -4,10 +4,35 @@ layout: index
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+  <link rel="stylesheet" href="/assets/css/reset.css" media="all">
+  <link rel="stylesheet" href="/assets/css/style.css" media="all">
 </head>
 
 <body>
   <div id='header'>
+      <div class='content'>
+    	<div class='en'>
+          <h1>OSSSHANGHAI</h1>
+          <ul>
+            <li><a href='#what'>What?</a></li>
+            <li><a href='#details'>Next meetup</a></li>
+            <li><a href='#about'>About</a></li>
+          </ul>
+        </div>
+    	<div class='cn'>
+          <h1>OSS上海聚会</span></h1>
+          <ul>
+            <li><a href='#what'>主题</a></li>
+            <li><a href='#details'>近期活动</a></li>
+            <li><a href='#about'>关于</a></li>
+          </ul>
+        </div>
+      </div>
+    
+  </div>
+  
+  <div id="container">
     {% for post in site.posts %}  
       <div class="en">
         <h2>{{ post.title }}</h2>
@@ -22,9 +47,6 @@ layout: index
         <h2>{{ post.what-cn }}</h2>
       </div>
     {% endfor %}
-  </div>
-  
-  <div id="container">
   </div>
 </body>
 </html>
