@@ -185,7 +185,7 @@ input:focus {
 */
 
 #header {
-  background: #86C237 url(../images/opensoure-logo2.png) no-repeat center bottom;
+  background: #86C237 url(../images/opensourcelogo2.png) no-repeat center bottom;
   border-top: 3px solid #7AAE44;
   height: 210px;
 /*  text-align:center;*/
@@ -211,7 +211,7 @@ input:focus {
 }
 
 #main ul {
-  background: #333;
+  background: #7AAE44;;
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
