@@ -22,6 +22,10 @@ ul, li {
   max-width: 940px;
 }
 
+.container h2 {
+  color: #76b421;
+}
+
 /**/
 header .container div,
 #events .container div {
@@ -33,10 +37,7 @@ header .container div,
 }
 
 #archive .container div {
-  display: inline-block;
-  float:left;
-  position:relative;
-  width: 960px;
+
 }
 
 /**/
