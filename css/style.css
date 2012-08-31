@@ -1,0 +1,257 @@
+body {
+  color: #333;
+  font-family: Verdana, sans-serif;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.content {
+  clear: both;
+  margin: 0 auto;
+  text-align: left;
+  width: 780px;
+}
+
+a {
+  color: #ff6600;
+}
+
+a:hover {
+  color: #ff6600;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  font-family: 'Varela Round', Verdana, sans-serif;
+}
+
+h1 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 100px 0 50px;
+}
+
+h1 span {
+  color: #fff;
+}
+
+.cn h1 span {
+  font-size: 20px;
+}
+
+h2 {
+  color: #ff6600;
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.content {
+  clear: both;
+  margin: 0 auto;
+  text-align: left;
+  width: 780px;
+}
+
+.en {
+  float: left;
+  width: 380px;
+}
+
+.cn {
+  float: right;
+  width: 380px;
+}
+
+#main ul li span {
+  display: none;
+}
+
+#header ul {
+  margin: 0;
+}
+
+#header ul li {
+  display: inline;
+  padding-right: 5px;
+}
+
+#header ul a {
+  background: #7AAE44;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  color: #fff;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+#header ul a:hover {
+  background: #fff;
+  color: #7AAE44;
+  text-decoration: none;
+}
+
+#footer {
+  clear: both;
+  padding: 20px 0;
+  color: #aaa;
+}
+
+#footer a {
+  color: #aaa;
+}
+
+#main .button {
+  background: #86C237;
+  border: 0;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 5px 10px;
+  text-decoration: none;
+  margin: 5px 0px;
+}
+#main .button:hover {
+  background: #7AAE44;
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.button {
+  color: #86C237;
+}
+
+.button:hover {
+  color: #86C237;
+  text-decoration: none;
+}
+
+input {
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  margin: 0px 0px 5px;
+  outline:none;transition: all 0.25s ease-in-out
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  padding: 7px 5px;
+}
+
+input:focus {
+  border-color: #FF6600;
+  box-shadow: 0 0 5px rgba(255, 102, 0, 1);
+  -webkit-box-shadow: 0 0 5px rgba(255, 102, 0, 1);
+  -moz-box-shadow: 0 0 5px rgba(255, 102, 0, 1);
+}
+
+/*
+#main ul {
+  background: #333;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+#main ul li {
+  background: transparent url(../images/icon-clock.png) no-repeat 10px center;
+  color: #fff;
+  padding-left: 50px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+#main ul li.place {
+  background-image: url(../images/icon-marker.png);
+  border-top: 1px dotted #666;
+}
+
+#main ul li strong {
+  display: block;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+*/
+
+#header {
+  background: #86C237 url(../images/opensoure-logo2.png) no-repeat center bottom;
+  border-top: 3px solid #7AAE44;
+  height: 210px;
+/*  text-align:center;*/
+}
+
+#header .cn {
+  padding-left: 160px;
+  width: 220px;
+}
+
+.en {
+  float: left;
+  width: 380px;
+}
+
+.cn {
+  float: right;
+  width: 380px;
+}
+
+#main {
+  padding-top: 30px;
+}
+
+#main ul {
+  background: #333;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+#main ul li {
+  background: transparent url(../images/icon-clock.png) no-repeat 10px center;
+  color: #fff;
+  padding-left: 50px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+#main ul li.place {
+  background-image: url(../images/icon-marker.png);
+  border-top: 1px dotted #666;
+}
+
+#main ul li strong {
+  display: block;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+h2 {
+  color: #7AAE44;
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+a {
+  color: #7AAE44;
+}
+a:hover {
+  color: #7AAE44;
+  text-decoration: none;
+}
