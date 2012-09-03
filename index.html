@@ -4,19 +4,21 @@ title: 上海开源聚会
 ---
 
 <article>
-  <time datetime="{{ site.posts.first.date | xmlschema }}">{{ site.posts.first.date | date: "%B %d, %Y" }}</time>
+  <time datetime="{{ site.posts.first.date | xmlschema }}">{{ site.posts.first.date | date: "%m月%d号%Y年" }}</time>
   <h2><a href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h2>
   {{ site.posts.first.content }}
 </article>
-
-<div id="archive">
+{{ site.posts.length}}
+{% if site.posts.length > 1 %}
+<section id="archive">
   <h2>Previous events</h2>
   <ul id="posts">
     {% for post in site.posts offset:1 %}
       <li>
-        <time datetime="{{ post.date | xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time> ›
+        <time datetime="{{ post.date | xmlschema }}">{{ post.date | date: "%m月%d号%Y年" }}</time>
         <a href="{{ post.url }}">{{ post.title }}</a>
       </li>
     {% endfor %}
   </ul>
-</div>
+</section>
+{% endif %}
