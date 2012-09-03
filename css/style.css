@@ -131,6 +131,11 @@ time small {
 }
 
 #map {
+  margin: 20px 0 0 0;
   width: 100%;
   height: 400px;
+}
+
+#map div:first-child {
+  width: 0%;
 }
