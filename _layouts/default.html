@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+  <title>{{ page.title }}</title>
+
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta name="description" content="上海开源聚会">
+  <meta name="author" content="Ronan Berder">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- CSS -->
+  <link href="/css/reset.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="http://yandex.st/highlightjs/6.2/styles/monokai.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Imprima' rel='stylesheet' type='text/css'>
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+
+  <!-- JS -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+  <script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
+  <script type="text/javascript">(function($) { hljs.initHighlightingOnLoad(); })(jQuery);</script>
+  <!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+  <!-- RSS -->
+  <link href="http://feeds.feedburner.com/RonanBerder" rel="alternate" title="Ronan Berder" type="application/atom+xml">
+
+  <!-- Icons -->
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
+</head>
+<body>
+  <nav id="header">
+  	<h1><a href="{{ base.url }}/">上海开源聚会</a></h1>	
+    <ul id="links">
+      <li class='weibo'><a href="http://twitter.com/hunvreus">Shanghai Open Source meetup on Weibo</a></li>
+      <li class='rss'><a href="/atom.xml">Shanghai Open Source meetup RSS feed</a></li>
+      <li class='newsletter'><a href="/atom.xml">Shanghai Open Source meetup's newsletter</a></li>
+    </ul>
+  </nav>
+  <div id="content">
+    {{ content }}
+  </div>
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-773975-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+</body>
+</html>
