@@ -11,17 +11,17 @@ title: 上海开源聚会
 
 {% for post in site.posts offset:1 %}
   {% if forloop.first %}
-    <div id="archive">
+  <section id="archive">
   {% endif %}
-    <h2>archive</h2>
-    <ul id="posts">
-      <li>
-        <time datetime="{{ post.date | xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time> ›
-        <a href="{{ post.url }}">{{ post.title }}</a>
-      </li>
-{% if forloop.last %}
+  <h2>Previous Event</h2>
+  <ul id="posts">
+    <li>
+      <time datetime="{{ post.date | xmlschema }}">{{ post.date | date: "%m月%d号%Y年" }}</time>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% if forloop.last %}
   </ul>
-</div>
+</section>  
 {% endif %}
 {% endfor %}
 
