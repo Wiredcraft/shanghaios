@@ -10,6 +10,9 @@ body {
   text-align: center;
 }
 
+.hidden {
+  display: none;
+}
 a,
 a:visited,
 a:link {
@@ -19,7 +22,6 @@ a:link {
 a:hover {
   text-decoration: underline;
 }
-
 
 .cn {
   width: 50%;
