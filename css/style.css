@@ -6,7 +6,6 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 0;
-  text-align: center;
 }
 
 a,
@@ -20,18 +19,29 @@ a:hover {
 }
 
 /* Layout */
-#header,
-#content article,
-#archive h2,
-#archive ul,
-#post-content article{
-  margin: 0 auto;
-  max-width: 700px;
-  text-align: left;
+#wrapper {
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  height: 100%;
+  overflow: auto;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  width: 50%;
+}
+
+#map {
+  height: 100%;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  width: 50%;
+  z-index: -1;
 }
 
 /* Header */
 #header {
+  margin: 0 -20px 20px;
   padding: 20px 0;
 }
 
@@ -86,69 +96,24 @@ h1 a {
   background-position: -120px top;
 }
 
-#header ul#languages {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-}
-
-#launguages li {
-  list-style: none;
-  width: 30px;
-  height: 30px;
-  margin: 3px;
-  background-color: #DDD;
-  border-radius: 4px;
-}
-
-#launguages li a {
-  color: #7B7B7B;
+/* Content */
+h2 {
+  background: #67c936;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 0 20px -20px;
+  padding: 5px 10px;
   text-transform: uppercase;
 }
 
-#launguages li a.lang-en {
-  font-size: 14px;
-  position: relative;
-  top: 5px;
-  left: 5px;
-}
-#launguages li a.lang-cn {
-  font-size: 12px;
-  font-weight: 700;
-  position: relative;
-  top: 4px;
-  left: 3px;
+#wrapper section {
+  margin-bottom: 20px;
 }
 
-#launguages li a:hover {
-  text-decoration: none;
-  color: #242424;
-}
-
-/* Content */
-#content,
-#post-content {
- padding-top: 40px;
-}
-
-h1,
-h2,
-h3 {
-  font-weight: normal;
-}
-
-article h2 {
-  font-size: 24px;
+#wrapper p {
   margin: 0 0 20px;
-}
-
-article p {
-  margin: 0 0 20px;
-}
-
-#archive {
-  background: #eee;
-  padding: 15px 20px;
 }
 
 #archive ul {
@@ -176,8 +141,14 @@ time small {
   display: block;
 }
 
-#map {
-  margin: 0;
-  width: 350px;
-  height: 350px;
+#announcement {
+  background: #67c936;
+  color: #fff;
+  margin: 0 -20px;
+  padding: 20px;
+}
+
+#announcement h2 {
+  background: #fff;
+  color: #67c936;;
 }

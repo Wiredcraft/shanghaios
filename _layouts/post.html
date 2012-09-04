@@ -3,8 +3,8 @@ layout: default
 ---
 
 <article>
-  <time datetime="{{ post.date | xmlschema }}">{{ page.date | date: "%m月%d号%Y年" }}</time>
-  <h2>{{ page.title }}</h2>
+  <h2>On {{ page.date | date: "%m月%d号%Y年" }}</h2>
+  <h3>{{ page.title }}</h3>
   {{ content }}
 </article>
 
