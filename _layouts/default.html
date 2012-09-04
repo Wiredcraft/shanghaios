@@ -51,16 +51,16 @@ languages: "dfsfsdf"
         {% when 'chinese' %}
         <div class='cn'>
           <div class="content">
-            <h2>EVENT:{{ post.title }}</h2>
-            <p class="when">{{ post.date | date: "%Y年 %m月 %d日" }} ,{{post.time}}点 <small>(right after work)</small></p>
+            <h2>近期活动</h2>
+            <p class="when">{{ post.date | date: "%Y年 %m月 %d日" }}, 下午{{ post.time }}点 <small>(right after work)</small></p>
             <p class="where">{{ post.address }}<small>({{ post.road }})</small></p>
           </div>            
         </div>
         {% when 'english' %}
         <div class='en'>
           <div class="content">
-            <h2>EVENT:{{ post.title }}</h2>
-            <p class="when">{{ post.date | date: "%m %d %Y" }} , from 7:00 PM <small>(right after work)</small></p>
+            <h2>Upcoming event</h2>
+            <p class="when">{{ post.date | date: "%b %d %Y" }}, from {{ post.time | "%I"}}pm<small>(right after work)</small></p>
             <p class="where">{{ post.address }}<small>({{ post.road }})</small></p>
           </div>
         </div>

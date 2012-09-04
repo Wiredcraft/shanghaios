@@ -8,8 +8,8 @@ title: 上海开源聚会
       <div class='cn'>
         <div class="content">
           <article>
-            <h2>Latest blog post ({{ site.posts.first.date | date: "%m月 %d日 %Y年 " }})</h2>
-            <h3><a href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h3>
+            <h2>Latest blog post ({{ post.date | date: "%Y年 %m月 %d日" }})</h2>
+            <h3><a href="{{ site.posts.first.url }}">{{ post.title }}</a></h3>
                {{ post.content }}
           </article>
         </div>
@@ -18,8 +18,8 @@ title: 上海开源聚会
       <div class='en'>
         <div class="content">
           <article>
-            <h2>Latest blog post ({{ site.posts.first.date | date: "%m %d %Y " }})</h3>
-            <h3><a href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h3>
+            <h2>Latest blog post ({{ post.date | date: "%B %d, %Y" }})</h3>
+            <h3><a href="{{ site.posts.first.url }}">{{ post.title }}</a></h3>
             {{ site.posts.first.content }}
           </article>
         </div>
