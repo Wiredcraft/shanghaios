@@ -10,9 +10,6 @@ body {
   text-align: center;
 }
 
-.hidden {
-  display: none;
-}
 a,
 a:visited,
 a:link {
@@ -118,6 +115,15 @@ nav li.twitter a {
 nav li.twitter a:hover {
   background-position: -250px top;
 }
+
+nav li.en a {
+  background-position: -150px bottom;
+}
+nav li.en a:hover {
+  background-position: -150px top;
+}
+
+
 
 /* Content */
 #content {

@@ -19,7 +19,6 @@
     padding: 0;
   }
   
-
   nav {
     margin: 0 auto;
     width: 100%;
@@ -91,6 +90,13 @@
     background-position: -200px top;
   }
   
+  nav li.en a {
+    background-position: -160px bottom;
+  }
+  nav li.en a:hover {
+    background-position: -160px top;
+  }
+  
   /*content*/
   h2 {
     font-size: 12px;
@@ -103,7 +109,7 @@
   
   section {
     margin: 0 auto 20px;
-    min-width: 600px;
+    width: 100%;
     text-align: left;
   }
   
@@ -117,5 +123,4 @@
     margin: 0;
     padding: 10px 0 10px 50px;
   }
-  
 }
