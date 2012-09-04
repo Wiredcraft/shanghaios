@@ -6,6 +6,7 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 a,
@@ -18,36 +19,26 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Layout */
-#wrapper {
-  background: #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  height: 100%;
-  overflow: auto;
-  padding: 20px;
-  position: fixed;
-  left: 0;
-  width: 50%;
-}
-
+/* Map */
 #map {
-  height: 100%;
-  margin: 0;
-  position: absolute;
-  right: 0;
-  width: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1) inset;
+  height: 200px;
+  margin: 0 0 20px;
+  text-align: left;
+  width: 100%;
   z-index: -1;
 }
 
 /* Header */
-#header {
-  margin: 0 -20px 20px;
+nav {
+  margin: 0 auto;
+  max-width: 700px;
   padding: 20px 0;
+  text-align: left;
 }
 
 h1 {
-  margin: 0 0 20px;
-  text-align: center;
+  display: inline;
 }
 
 h1 a {
@@ -58,97 +49,83 @@ h1 a {
   width: 120px;
 }
 
-#links {
+nav ul {
+  float: right;
   list-style: none;
-  margin: 20px 0 0;
+  margin: 0;
   padding: 0;
+  overflow: hidden;
   text-align: center;
+  width: 140px;
 }
 
-#links li {
+nav li {
   display: inline;
-  margin: 0 5px;
+  float: right;
+  margin: 0 20px 20px 0;
   padding: 0;
 }
 
-#links a {
+nav li a {
   background: url(/images/bg-icons.png) left bottom no-repeat;
   display: inline-block;
-  height: 60px;
+  height: 50px;
   text-indent: -999em;
-  width: 60px;
+  width: 50px;
 }
-#links a:hover {
+nav li a:hover {
   background-position: left top;
 }
 
-#links li.rss a {
-  background-position: -60px bottom;
+nav li.rss a {
+  background-position: -50px bottom;
 }
-#links li.rss a:hover {
-  background-position: -60px top;
+nav li.rss a:hover {
+  background-position: -50px top;
 }
 
-#links li.newsletter a {
-  background-position: -120px bottom;
+nav li.newsletter a {
+  background-position: -100px bottom;
 }
-#links li.newsletter a:hover {
-  background-position: -120px top;
+nav li.newsletter a:hover {
+  background-position: -100px top;
+}
+
+nav li.en a {
+  background-position: -150px bottom;
+}
+nav li.en a:hover {
+  background-position: -150px top;
 }
 
 /* Content */
+#content {
+  clear: both;
+}
+
 h2 {
   background: #67c936;
   color: #fff;
   display: inline-block;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
-  margin: 0 0 20px -20px;
+  margin: 0 0 20px;
   padding: 5px 10px;
+  position: relative;
   text-transform: uppercase;
 }
 
-#wrapper section {
-  margin-bottom: 20px;
-}
-
-#wrapper p {
+h3 {
+  font-size: 22px;
   margin: 0 0 20px;
 }
 
-#archive ul {
-  list-style: none;
-  padding: 20px 0;
+section {
+  margin: 0 auto 20px;
+  max-width: 700px;
+  text-align: left;
 }
 
-time {
-  color: #aaa;
-}
-
-time:before {
-  border-top: 10px solid transparent;
-  border-right: 10px solid #fff;
-  border-bottom: 10px solid transparent;
-  bottom: 10px;
-  content: '';
-  display: inline-block;
-  right: 0px;
-  position: absolute;
-  z-index: 9;
-}
-
-time small {
-  display: block;
-}
-
-#announcement {
-  background: #67c936;
-  color: #fff;
-  margin: 0 -20px;
-  padding: 20px;
-}
-
-#announcement h2 {
-  background: #fff;
-  color: #67c936;;
+p {
+  margin: 0 0 20px;
 }
