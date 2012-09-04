@@ -19,6 +19,17 @@ a:hover {
   text-decoration: underline;
 }
 
+
+.cn {
+  float: left;
+  width: 400px;
+}
+ 
+.en {
+  float: right;
+  width: 400px;
+}
+
 /* Map */
 #map {
   box-shadow: 0 0 10px rgba(0, 0, 0, 1) inset;
@@ -91,11 +102,11 @@ nav li.newsletter a:hover {
   background-position: -100px top;
 }
 
-nav li.en a {
-  background-position: -150px bottom;
+nav li.twitter a {
+  background-position: -250px bottom;
 }
-nav li.en a:hover {
-  background-position: -150px top;
+nav li.twitter a:hover {
+  background-position: -250px top;
 }
 
 /* Content */
@@ -128,4 +139,10 @@ section {
 
 p {
   margin: 0 0 20px;
+}
+
+/* archive */
+#archive ul li {
+  list-style: none;
+  
 }

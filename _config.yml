@@ -3,3 +3,18 @@ exclude: ['README.markdown']
 permalink: pretty
 pygments: true
 safe: false
+
+lists: [1,2,3,4,5, 6]
+
+eng_post: [1,3]
+
+postslist:
+  - languages: "english"
+    title: BBQ
+    number: 1
+  - languages: "chinese"
+    title: BBQCN
+    number: 2
+  - languages: "english"
+    title: BBQ2 
+    number: 3

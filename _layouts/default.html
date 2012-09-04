@@ -1,5 +1,6 @@
 ---
 layout: default
+languages: "dfsfsdf"
 ---
 <!DOCTYPE html>
 <head>
@@ -14,7 +15,7 @@ layout: default
   <!-- CSS -->
   <link href="/css/normalize.css" rel="stylesheet" type="text/css">
   <link href="/css/style.css" rel="stylesheet" type="text/css">
-
+  
   <!-- JS -->
   <script src='http://api.tiles.mapbox.com/mapbox.js/v0.6.5/mapbox.js'></script>
   <link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.5/mapbox.css' rel='stylesheet' />
@@ -38,16 +39,29 @@ layout: default
       <li class='weibo'><a href="http://twitter.com/hunvreus">Shanghai Open Source meetup on Weibo</a></li>
       <li class='rss'><a href="/atom.xml">Shanghai Open Source meetup RSS feed</a></li>
       <li class='newsletter'><a href="/atom.xml">Shanghai Open Source meetup's newsletter</a></li>
-      <li class='language en'><a href="/en">Switch language to English</a></li>
+      <li class='twitter'><a href="#">twitter</a></li>
     </ul>
   </nav>
   
   <div id='map'></div>
   
   <section id="announcement">
-    <h2>Next event</h2>
-    <p class="when">September 23, 2012 from 7:00 PM <small>(right after work)</small></p>
-    <p class="where">Gold Cider, 424 Yanping Lu <small>(near Kangding Lu)</small></p>
+    {% for post in site.posts %}  
+      {% case post.language %}
+        {% when 'chinese' %}
+        <div class='cn'>
+          <h2>EVENT:{{ post.title }}</h2>
+          <p class="when">{{ post.date | date: "%Y年 %m月 %d日" }} ,{{post.time}}点 <small>(right after work)</small></p>
+          <p class="where">{{ post.address }}<small>({{ post.road }})</small></p>
+        </div>
+        {% when 'english' %}
+        <div class='en'>
+          <h2>EVENT:{{ post.title }}</h2>
+          <p class="when">{{ post.date | date: "%m %d %Y" }} , from 7:00 PM <small>(right after work)</small></p>
+          <p class="where">{{ post.address }}<small>({{ post.road }})</small></p>
+        </div>
+      {% endcase %}
+    {% endfor %}
   </section>
   
   <script>
@@ -80,7 +94,7 @@ layout: default
   
   <section>
     {{ content }}
-  </div>
+  </section>
   
   <script type="text/javascript">
 
