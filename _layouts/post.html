@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<article>
+  <h2>On {{ page.date | date: "%m月%d号%Y年" }}</h2>
+  <h3>{{ page.title }}</h3>
+  {{ content }}
+</article>
+
+<ul id="pager">
+  {% if page.next %}
+    <li>
+      Newer post › <a href="{{ page.next.url }}">{{ page.next.title }}</a> (<time datetime="{{ page.next.date | xmlschema }}">{{ page.next.date | date: "%m月%d号%Y年" }}</time>)
+    </li>
+  {% endif %}
+  {% if page.previous %}
+    <li>
+      Older post › <a href="{{ page.previous.url }}">{{ page.previous.title }}</a> (<time datetime="{{ page.previous.date | xmlschema }}">{{ page.previous.date | date: "%m月%d号%Y年" }}</time>)
+    </li>
+  {% endif %}
+</ul>

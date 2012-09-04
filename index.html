@@ -1,136 +1,59 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
-  <title>Shanghai Open Source</title>
-  <link rel='shortcut icon' href='images/favicon.ico' type='image/x-icon' />
-  <link rel='stylesheet' media='all' href='css/reset.css' />
-  <link rel='stylesheet' media='all' href='css/style.css' />
-  <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-  <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
-  <style type="text/css">
-   #mc_embed_signup{}
-   /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-      We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-  </style>
-  
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-25482847-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-</head>
-<body>
-<div id='header'>
-  <div class='content'>
-	<div class='en'>
-      <h1><span>Shanghai Open Source</span></h1>
-      <ul>
-        <li class='first'><a href='#what'>What?</a></li>
-        <li><a href='#details'>When</a></li>
-        <li><a href='#about'>About</a></li>
-      </ul>
-    </div>
-	<div class='cn'>
-      <h1>上海开源聚会</h1>
-      <ul>
-        <li class='first'><a href='#what'>主题</a></li>
-        <li><a href='#details'>活动时间</a></li>
-        <li><a href='#about'>关于</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div id='main'>
-  <div class='what content'>
-    <a name='what'></a>
-	<div class='en'>
-      <h2>What ?</h2>
-      <p>We are happy to announce the launch of a series of Shanghai Open Source events. To bring the community together and provide a platform for Open Source enthusiasts in Shanghai to communicate and share their thinking.</p>
-      <p>So join us for a BBQ at the <a href="http://www.goldcider.com/">Gold Cider</a> who are kindly hosting us.</p>
-      <p>The only thing you need to do is to join us! If you wish to help us or contribute to this event or future ones, let us know. If you love Open Source, are eager to know more open source people while enjoy nice food, sign up your name and join us!</p>
-    </div>
-	<div class='cn'>
-      <h2>主题</h2>
-      <p>此次活动是由<a href='http://beta.yunio.com'>云诺</a>和 <a href='http://wiredcraft.com/'>Wiredcraft</a> 联合的一项非盈利性质的开源交流活动，它旨在提供给各开源爱好者一个自由交流，尽情分享的平台，从而为开源在本地区的发展起到推波助澜的作用。开源是可以被公众使用的软件，并且此软件的使用、修改和发行也不受许可证的限制。</p>
-      <p>此次我们将在<a href="http://www.goldcider.com/">金西打酒</a>为各位准备一场盛大的烧烤活动，我们将为你准备各类烧烤设备，美食和饮料。</p>
-      <p>你要做的只是加入我们，同我们一起交流开源、享受美食！强大的技术交流和强劲的味蕾冲击，相信这样的“强强联手”定能使开源交流在这个夏末秋初的季节再次升温！</p>
-      <p>如果你愿意帮助我们一起举办更多的活动，请随时联系我们！各位开源爱好者，如果你想在享受美食和烧烤乐趣的同时认识更多志同道合的开源发烧友，就火速报名，和我们一起开动吧！</p>
-    </div>
+---
+layout: default
+title: 上海开源聚会
+---
+{% for post in site.posts %}  
+  {% case post.language %}
+    {% when 'chinese' %}
+      <div class='cn'>
+        <div class="content">
+          <article>
+             <h2>Latest blog post ({{ site.posts.first.date | date: "%m月 %d日 %Y年 " }})</h3>
+             <h3><a href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h3>
+             {{ site.posts.first.content }}
+           </article>
+           {% for post in site.posts offset:1 %}
+             {% if forloop.first %}
+             <section id="archive">
+               <h2>Previous blog posts</h2>
+               <ul id="posts">
+               {% endif %}
+                 <li>
+                   <time datetime="{{ post.date | xmlschema }}">{{ post.date | date: "%m月 %d日 %Y年 " }}</time>
+                   <a href="{{ post.url }}">{{ post.title }}</a>
+                 </li>
+               {% if forloop.last %}
+               </ul>
+             </section>  
+             {% endif %}
+           {% endfor %}
+        </div>
+      </div>
     
-  </div>
-
-  <div class='details content'>
-    <a name='details'></a>
-	<div class='en'>
-      <h2>When</h2>
-      <ul class="details">
-        <li class="date"><span>Date & time: </span><strong>Sept 13, 2012 </strong><strong>7:00 PM</strong></li>
-        <li class="place"><span>Place: </span><strong>Gold Cider</strong>425 Yanping Road, Building 1, Suite 103</li>
-      </ul>
-      <p>You can check all the event's details on Lanyrd as well as the <a href="http://goo.gl/maps/wgJGw">map</a> if necessary, we'll probably be chilling around the BBQ enjoying the nice drinks.</p>
-    </div>
-	<div class='cn'>
-      <h2>活动时间</h2>
-      <ul class="details">
-        <li class="date"><span>Date & time: </span><strong>2012年09月13日</strong><strong>7:00 PM</strong></li>
-        <li class="place"><span>Place: </span><strong>金西打酒</strong>延平路425号楼103室, 靠近昌平路</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class='about content'>
-    <a name='about'></a>
-	  <div class='en'>
-      <h2>About</h2>
-      <p>This event is orginized by <a href='http://beta.yunio.com/'>Yunio</a> and <a href='http://wiredcraft.com'>Wiredcraft</a>.</p>
-    </div>
-	<div class='cn'>
-      <h2>关于</h2>
-      <p>本次活动由<a href='http://beta.yunio.com'>云诺</a> 和<a href='http://wiredcraft.com/'>Wiredcraft</a> 联合呈现。</p>
-    </div>
-  </div>
-	
-	<div class='about content'>
-    <div class='en'>
-      <h2>Contact us</h2>
-      <p>To contact us send an email to: <b>opensourcemeetup -at- gmail.com</b>.</p>
-    </div>
-    <div class='cn'>
-      <h2>联系我们</h2>
-      <p>发送邮件至：<b>opensourcemeetup -at- gmail.com</b> 联系我们。</p>
-    </div>
-  </div>
-	
-  <div class='newsletter content'>
-    <div class='en'>
-      <form action="http://wiredcraft.us2.list-manage2.com/subscribe/post?u=18eb8d6c34ad5d4e781541da9&amp;id=195c6e6d2e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-       <label for="mce-EMAIL"><h2>Subscribe to our mailing list</h2></label>
-       <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required size="60">
-       <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-      </form>
-    </div>
-    <div class='cn'>
-      <form action="http://wiredcraft.us2.list-manage2.com/subscribe/post?u=18eb8d6c34ad5d4e781541da9&amp;id=195c6e6d2e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-       <label for="mce-EMAIL"><h2>订阅我们的邮件</h2></label>
-       <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="邮箱地址" required size="60">
-       <div class="clear"><input type="submit" value="确认" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-      </form>
-      </div>        
-      </form>
-  </div>
-</div>
-
-<div id='footer'>
-  <div class='content'>
-    Content on this site is licensed under a <a href='http://creativecommons.org/licenses/by/3.0/'>Creative Commons Attribution 3.0 License</a>.
-  </div>
-</div>
-</body>
-</html>
+    {% when 'english' %}
+      <div class='en'>
+        <div class="content">
+          <article>
+            <h2>Latest blog post ({{ site.posts.first.date | date: "%m %d %Y " }})</h3>
+            <h3><a href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h3>
+            {{ site.posts.first.content }}
+          </article>
+          {% for post in site.posts offset:1 %}
+            {% if forloop.first %}
+            <section id="archive">
+              <h2>Previous blog posts</h2>
+              <ul id="posts">
+              {% endif %}
+                <li>
+                  <time datetime="{{ post.date | xmlschema }}">{{ post.date | date: "%m %d %Y " }}</time>
+                  <a href="{{ post.url }}">{{ post.title }}</a>
+                </li>
+              {% if forloop.last %}
+              </ul>
+            </section>  
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+  {% endcase %}
+{% endfor %}
