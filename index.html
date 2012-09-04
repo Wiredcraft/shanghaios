@@ -4,48 +4,54 @@ title: 上海开源聚会
 ---
 
       <div class='cn'>
-        <article>
-           <h2>Latest blog post ({{ site.posts.first.date | date: "%m月 %d日 %Y年 " }})</h3>
-           <h3><a href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h3>
-           {{ site.posts.first.content }}
-         </article>
-         {% for post in site.posts offset:1 %}
-           {% if forloop.first %}
-           <section id="archive">
-             <h2>Previous blog posts</h2>
-             <ul id="posts">
+        <div class="content">
+          <article>
+             <h2>Latest blog post ({{ site.posts.first.date | date: "%m月 %d日 %Y年 " }})</h3>
+             <h3><a href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h3>
+             {{ site.posts.first.content }}
+           </article>
+           {% for post in site.posts offset:1 %}
+             {% if forloop.first %}
+             <section id="archive">
+               <h2>Previous blog posts</h2>
+               <ul id="posts">
+               {% endif %}
+                 <li>
+                   <time datetime="{{ post.date | xmlschema }}">{{ post.date | date: "%m月 %d日 %Y年 " }}</time>
+                   <a href="{{ post.url }}">{{ post.title }}</a>
+                 </li>
+               {% if forloop.last %}
+               </ul>
+             </section>  
              {% endif %}
-               <li>
-                 <time datetime="{{ post.date | xmlschema }}">{{ post.date | date: "%m %d %Y" }}</time>
-                 <a href="{{ post.url }}">{{ post.title }}</a>
-               </li>
-             {% if forloop.last %}
-             </ul>
-           </section>  
-           {% endif %}
-         {% endfor %}
+           {% endfor %}
+        </div>
       </div>
     
   
       <div class='en'>
-        <article>
-          <h2>Latest blog post ({{ site.posts.first.date | date: "%m %d %Y " }})</h3>
-          <h3><a href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h3>
-          {{ site.posts.first.content }}
-        </article>
-        {% for post in site.posts offset:1 %}
-          {% if forloop.first %}
-          <section id="archive">
-            <h2>Previous blog posts</h2>
-            <ul id="posts">
+        <div class="content">
+          <article>
+            <h2>Latest blog post ({{ site.posts.first.date | date: "%m %d %Y " }})</h3>
+            <h3><a href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h3>
+            {{ site.posts.first.content }}
+          </article>
+          {% for post in site.posts offset:1 %}
+            {% if forloop.first %}
+            <section id="archive">
+              <h2>Previous blog posts</h2>
+              <ul id="posts">
+              {% endif %}
+                <li>
+                  <time datetime="{{ post.date | xmlschema }}">{{ post.date | date: "%m %d %Y " }}</time>
+                  <a href="{{ post.url }}">{{ post.title }}</a>
+                </li>
+              {% if forloop.last %}
+              </ul>
+            </section>  
             {% endif %}
-              <li>
-                <time datetime="{{ post.date | xmlschema }}">{{ post.date | date: "%m %d %Y " }}</time>
-                <a href="{{ post.url }}">{{ post.title }}</a>
-              </li>
-            {% if forloop.last %}
-            </ul>
-          </section>  
-          {% endif %}
-        {% endfor %}
+          {% endfor %}
+        </div>
       </div>
+  {% endcase %}
+{% endfor %}
