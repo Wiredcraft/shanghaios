@@ -116,14 +116,23 @@ nav li.twitter a:hover {
   background-position: -250px top;
 }
 
-nav li.en a {
+nav li.chinese a {
+  display: none;
+  background-position: -200px bottom;
+}
+nav li.chinese a:hover {
+  display: none;
+  background-position: -200px top;
+}
+
+nav li.english a {
+  display: none;
   background-position: -150px bottom;
 }
-nav li.en a:hover {
+nav li.english a:hover {
+  display: none;
   background-position: -150px top;
 }
-
-
 
 /* Content */
 #content {

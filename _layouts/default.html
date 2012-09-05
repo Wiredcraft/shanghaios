@@ -21,6 +21,7 @@ languages: "dfsfsdf"
   
   <!-- JS -->
   <script src='/javascripts/mapbox.js'></script>
+  <script src='/javascripts/jquery-1.7.2.min.js'></script>
   <link href='/css/mapbox.css' rel='stylesheet' />
   <!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -37,40 +38,26 @@ languages: "dfsfsdf"
 </head>
 <body>  
   <nav id="header">
-  	<h1><a href="{{ base.url }}/">上海开源聚会</a></h1>
+  	<h1><a href="{{ base.url }}/">   上海开源聚会</a></h1>
   	<ul>
       <li class='weibo'><a href="http://www.weibo.com/u/2987642162" target="_blank">Shanghai Open Source meetup on Weibo</a></li>
       <li class='rss'><a href="/atom.xml">Shanghai Open Source meetup RSS feed</a></li>
       <li class='newsletter'><a href="http://eepurl.com/o9bBz" target="_blank">Shanghai Open Source meetup's newsletter</a></li>
       <li class='twitter'><a href="https://twitter.com/ShanghaiOs" target="_blank">twitter</a></li>
-      <li class='en' style="display:none"><a href="#">English</a></li>
+      <li class='english'><a href="#">English</a></li>
     </ul>
   </nav>
   
-  <div id='map'></div>
+  <script>
+    $('.english').click(function(){
+      $('.english').addClass('chinese');
+      $('nav li.english a').css('background-position','-160px bottom');
+      $('.cn').hide();
+      $('.en').show();
+    });
+  </script>
   
-  <section id="announcement">
-    {% for post in site.posts %}  
-      {% case post.language %}
-        {% when 'chinese' %}
-        <div class='cn'>
-          <div class="content">
-            <h2>近期活动</h2>
-            <p class="when">{{ post.date | date: "%Y年 %m月 %d日" }}, 下午{{ post.time }}点 <small>(下班后)</small></p>
-            <p class="where">{{ post.address }}<small>({{ post.road }})</small></p>
-          </div>            
-        </div>
-        {% when 'english' %}
-        <div class='en'>
-          <div class="content">
-            <h2>Upcoming event</h2>
-            <p class="when">{{ post.date | date: "%b %d %Y" }}, from {{ post.time | "%I"}}pm<small>(right after work)</small></p>
-            <p class="where">{{ post.address }}<small>({{ post.road }})</small></p>
-          </div>
-        </div>
-      {% endcase %}
-    {% endfor %}
-  </section>
+  <div id='map'></div>
   
   <script>
     var m = mapbox.map('map');
