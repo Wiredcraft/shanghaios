@@ -2,6 +2,29 @@
 layout: default
 title: 上海开源聚会
 ---
+<section id="announcement">
+  {% for post in site.posts %}  
+    {% case post.language %}
+      {% when 'chinese' %}
+      <div class='cn'>
+        <div class="content">
+          <h2>近期活动</h2>
+          <p class="when">{{ post.date | date: "%Y年 %m月 %d日" }}, 下午{{ post.time }}点 <small>(下班后)</small></p>
+          <p class="where">{{ post.address }}<small>({{ post.road }})</small></p>
+        </div>            
+      </div>
+      {% when 'english' %}
+      <div class='en'>
+        <div class="content">
+          <h2>Upcoming event</h2>
+          <p class="when">{{ post.date | date: "%b %d %Y" }}, from {{ post.time | "%I"}}pm<small>(right after work)</small></p>
+          <p class="where">{{ post.address }}<small>({{ post.road }})</small></p>
+        </div>
+      </div>
+    {% endcase %}
+  {% endfor %}
+</section>
+
 {% for post in site.posts %}  
   {% case post.language %}
     {% when 'chinese' %}
