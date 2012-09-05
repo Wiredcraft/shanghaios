@@ -34,13 +34,13 @@
   }
 
   h1 a {
-    background-image: none;
+    background: url(/images/logo-small.png) center center no-repeat;
+    background-size: 50px 50px;
+    background-position: left center;
     display: inline-block;
     height: 50px;
-    width: 67px;
-    text-indent:111em;
-    color: #3b7217;
-    font-size:11px;
+    width: 50px;
+    text-indent:-999em;
   }
 
   nav ul {
