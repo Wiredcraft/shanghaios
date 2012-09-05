@@ -50,10 +50,9 @@ languages: "dfsfsdf"
   
   <script>
     $('.english').click(function(){
-      $('.english').addClass('chinese');
-      $('nav li.english a').css('background-position','-160px bottom');
-      $('.cn').hide();
-      $('.en').show();
+      $('.english a').toggleClass('switch-lang');
+      $('.cn').toggleClass('hidden');
+      $('.en').toggleClass('mobile-show');
     });
   </script>
   
