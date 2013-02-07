@@ -27,6 +27,7 @@ a:hover {
 .en {
   float: right;
   width: 50%;
+  clear: both;
 }
 
 .en .content {
