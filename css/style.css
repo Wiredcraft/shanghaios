@@ -27,7 +27,6 @@ a:hover {
 .en {
   float: right;
   width: 50%;
-  clear: both;
 }
 
 .en .content {
@@ -38,6 +37,9 @@ a:hover {
   padding-right: 10px;
 }
 
+.articles{
+  overflow: hidden;
+}
 /* Map */
 #map {
   background: #eee;

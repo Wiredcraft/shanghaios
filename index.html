@@ -25,6 +25,7 @@ title: 上海开源聚会
   {% endfor %}
 </section>
 
+<section class="articles">
 {% for post in site.posts limit: 2 %}  
   {% case post.language %}
     {% when 'chinese' %}
@@ -49,7 +50,9 @@ title: 上海开源聚会
       </div>
   {% endcase %}
 {% endfor %}
+</section>
 
+<section class="articles">
 {% for post in site.posts offset: 2 %}  
   {% case post.language %}
     {% when 'chinese' %}
@@ -74,3 +77,4 @@ title: 上海开源聚会
       </div>
   {% endcase %}
 {% endfor %}
+</section>
