@@ -1,0 +1,166 @@
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+/* General */
+body {
+  background: #2c3e50;
+  color: #fff;
+  font: 18px/160% 'Open Sans', Arial, Helvetica, sans-serif;
+  padding: 30px;
+  text-align: center;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+  margin: 0 0 20px;
+}
+h1 {
+  font-size: 32px;
+}
+h2 {
+  font-size: 28px;
+}
+h3 {
+  font-size: 22px;
+}
+h4 {
+  font-size: 18px;
+}
+p {
+  margin: 0 0 20px;
+}
+a,
+a:link,
+a:visited {
+  color: #2ecc71;
+  text-decoration: none;
+}
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+a:active,
+a.active {
+  color: #54d98c;
+}
+#header,
+#content {
+  margin: 0 auto;
+  max-width: 720px;
+  text-align: left;
+}
+/* LANGUAGE SWITCH */
+#switch a {
+  background: #233140;
+  color: #3e5771;
+  display: block;
+  padding: 15px 0;
+  position: absolute;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  right: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  top: 20px;
+  width: 60px;
+}
+#switch a:hover {
+  background: #1a242f;
+  color: #fff;
+  text-decoration: none;
+}
+/* HEADER */
+#header {
+  display: block;
+  height: 240px;
+  margin-bottom: 30px;
+}
+#header .section {
+  background: #2ecc71;
+  display: block;
+  float: left;
+  height: 180px;
+  padding: 30px 0;
+  text-align: center;
+  width: 240px;
+}
+#header #home {
+  background: #2ecc71;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 3px;
+  -webkit-border-top-left-radius: 3px;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 3px;
+  -moz-border-radius-topleft: 3px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  color: #1b7943;
+}
+#header #home:hover,
+#header #home:active {
+  background: #40d47e;
+  text-decoration: none;
+}
+#header #home span {
+  color: #fff;
+  display: block;
+  font-size: 40px;
+}
+#header #location {
+  background: #29b765;
+  height: 240px;
+  padding: 0;
+}
+#header #details {
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+/* Content */
+#content .post {
+  background: #233140;
+  margin-bottom: 30px;
+  padding: 30px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+#content .post .time {
+  color: #354b60;
+}
+#content #archive {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

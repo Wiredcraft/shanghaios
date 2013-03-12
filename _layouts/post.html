@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<article class='post'>
+  <time datetime='{{ page.date | xmlschema }}' class='time'>{{ page.date | date: '%m/%d/%Y' }}</time>
+  <h2>{{ page.title }}</h2>
+  <section>
+    {{ content }}
+  </section>
+</article>

@@ -1,0 +1,19 @@
+---
+exclude: ['README.markdown', 'Makefile', 'component.json']
+pygments: true
+safe: false
+
+title: {en: "ShanghaiOS", cn: "上海开元"}
+home: {en: "/en.html", cn: "/"}
+switch: {en: "<a href='/'>中文</a>", cn: "<a href='/en.html'>en</a>"}
+name: {en: "Shanghai <span>Open Source</span>", cn: "上海<span>开元</span>"}
+description: {en: "Open Source community in Shanghai", cn: "上海看i阿哀怨"}
+
+details: {
+	en: { day: "February 7, 2009", time: "From 2:00 PM", addr: "666 Fuzhou road, Shanghai" },
+	cn: { day: "February 7, 2009", time: "From 2:00 PM", addr: "666 Fuzhou road, Shanghai" }
+}
+
+
+# url: http://wiredcraft.github.com/foundation
+# ga: 'UA-XXXXXXX-X'
