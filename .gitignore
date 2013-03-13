@@ -1,8 +1,6 @@
 .*
 !.gitignore
 !.gitmodules
-!.htaccess
 
-*.orig
-
-/_site
+_site/
+components/

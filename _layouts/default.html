@@ -1,0 +1,71 @@
+{% if page.lang == 'en' %}
+  {% assign lang = 'en' %}
+{% elsif page.lang == 'cn' %}
+  {% assign lang = 'zh-hans' %}
+{% endif %}
+{% assign name = site.name.[page.lang] %}
+{% assign description = site.description.[page.lang] %}
+{% assign home = site.home.[page.lang] %}
+{% assign switch = site.switch.[page.lang] %}
+{% assign title = site.title.[page.lang] %}
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <title>{{ page.title }} | {{ title }}</title>
+
+  <!-- Meta -->
+  <meta charset='utf-8'/>
+  <meta name='description' content='{{ description }}'/>
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'/>
+
+  <!-- CSS -->
+  <link href='{{ site.url }}/assets.css' rel='stylesheet' type='text/css'/>
+</head>
+<body class='{{ lang }}'>
+  <nav id='links'>
+    <ul>
+      <li class='language'>{{ switch }}</li>
+      <li class='twitter'><a href='http://twitter.com/ShanghaiOs' target='_blank'>t</a></li>
+      <li class='weibo'><a href='http://www.weibo.com/u/2987642162' target='_blank'>s</a></li>
+      <li class='newsletter'><a href='http://eepurl.com/o9bBz' target='_blank'>m</a></li>
+    </ul>
+  </nav>
+  
+  <header id='header'>
+    <a href='{{ site.url }}{{ home }}' id='home' class='section'>{{ name }}</a>
+
+    <div id='details' class='section'>
+      <h1>{{ site.description.[page.lang] }}</h1>
+      <ul>
+        <li class='when'>{{ site.details.[page.lang].day }}, {{ site.details.[page.lang].time }}</li>
+        <li class='where'>{{ site.details.[page.lang].addr }}</li>
+      </ul>
+    </div>
+  </header>
+
+  <section id='content'>
+    {{ content }}
+  </section>
+  
+  <footer id='footer'>{{  }}</footer>
+  
+  <!-- JS -->
+  <!--[if lt IE 9]><script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script><![endif]-->
+  <script src='{{ site.url }}/assets.js' type='text/javascript'></script>
+  <script src='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.js'></script>
+  <script>require('boot');</script>  
+	{% if site.ga %}
+	<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '{{ site.ga }}']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  {% endif %}
+</body>
+</html>
