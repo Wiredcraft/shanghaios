@@ -179,7 +179,7 @@ a.active {
 }
 #header #details ul {
   background: #2ecc71;
-  font-size: 24px;
+  font-size: 23px;
   list-style: none;
   margin: 0 30px;
   padding: 0;
@@ -202,8 +202,10 @@ a.active {
   speak: none;
   -webkit-font-smoothing: antialiased;
   font-size: 28px;
-  line-height: 140%;
-  margin-right: 15px;
+  line-height: 100%;
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
 }
 #header #details ul li.where:before {
   content: 'p';
