@@ -20,24 +20,26 @@
 
   <!-- CSS -->
   <link href='{{ site.url }}/assets.css' rel='stylesheet' type='text/css'/>
-  <link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.css' rel='stylesheet'/>
 </head>
 <body class='{{ lang }}'>
-  <nav id='switch'>{{ switch }}</nav>
+  <nav id='links'>
+    <ul>
+      <li class='language'>{{ switch }}</li>
+      <li class='twitter'><a href='http://twitter.com/ShanghaiOs' target='_blank'>t</a></li>
+      <li class='weibo'><a href='http://www.weibo.com/u/2987642162' target='_blank'>s</a></li>
+      <li class='newsletter'><a href='http://eepurl.com/o9bBz' target='_blank'>m</a></li>
+    </ul>
+  </nav>
   
   <header id='header'>
     <a href='{{ site.url }}{{ home }}' id='home' class='section'>{{ name }}</a>
 
-    <div id='location' class='section'>
-      <div id='map'></div>
-      <div class='details'></div>
-    </div>
-
     <div id='details' class='section'>
+      <h1>{{ site.description.[page.lang] }}</h1>
       <ul>
-        <li class='day'>{{ site.details.[page.lang].day }}</li>
-        <li class='time'>{{ site.details.[page.lang].time }}</li>
-        <li class='addr'>{{ site.details.[page.lang].addr }}</li>
+        <li class='when'>{{ site.details.[page.lang].day }}, {{ site.details.[page.lang].time }}</li>
+        <li class='where'>{{ site.details.[page.lang].addr }}</li>
+      </ul>
     </div>
   </header>
 

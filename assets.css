@@ -402,6 +402,14 @@ table {
     A set of useful LESS mixins
     More info at: http://lesselements.com
   ---------------------------------------------------*/
+/* ossfont */
+@font-face {
+  font-family: 'ossfont';
+  src: url('/fonts/ossfont.eot');
+  src: url('/fonts/ossfont.eot?#iefix') format('embedded-opentype'), url('/fonts/ossfont.woff') format('woff'), url('/fonts/ossfont.ttf') format('truetype'), url('/fonts/ossfont.svg#ossfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 /* General */
 body {
   background: #2c3e50;
@@ -453,26 +461,46 @@ a.active {
   text-align: left;
 }
 /* LANGUAGE SWITCH */
-#switch a {
+#links {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+#links ul,
+#links li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#links li.language {
+  font-weight: ;
+  text-transform: uppercase;
+}
+#links li.twitter,
+#links li.weibo,
+#links li.newsletter {
+  font-family: 'ossfont';
+  font-weight: normal;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  font-size: 26px;
+}
+#links a {
   background: #233140;
   color: #3e5771;
   display: block;
+  margin-bottom: 15px;
   padding: 15px 0;
-  position: absolute;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
   -moz-background-clip: padding-box;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  right: 20px;
-  text-transform: uppercase;
-  text-align: center;
-  top: 20px;
   width: 60px;
 }
-#switch a:hover {
-  background: #1a242f;
+#links a:hover {
+  background: #2ecc71;
   color: #fff;
   text-decoration: none;
 }
@@ -488,8 +516,6 @@ a.active {
   float: left;
   height: 180px;
   padding: 30px 0;
-  text-align: center;
-  width: 240px;
 }
 #header #home {
   background: #2ecc71;
@@ -508,7 +534,11 @@ a.active {
   -moz-background-clip: padding-box;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  color: #1b7943;
+  color: #208e4e;
+  font-size: 22px;
+  line-height: 160%;
+  text-align: center;
+  width: 240px;
 }
 #header #home:hover,
 #header #home:active {
@@ -518,14 +548,11 @@ a.active {
 #header #home span {
   color: #fff;
   display: block;
-  font-size: 40px;
-}
-#header #location {
-  background: #29b765;
-  height: 240px;
-  padding: 0;
+  font-size: 66px;
+  line-height: 160%;
 }
 #header #details {
+  background: #2bc06a;
   -webkit-border-top-right-radius: 3px;
   -webkit-border-bottom-right-radius: 3px;
   -webkit-border-bottom-left-radius: 0;
@@ -541,6 +568,71 @@ a.active {
   -moz-background-clip: padding-box;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+  width: 480px;
+}
+#header #details h1 {
+  color: #208e4e;
+  text-align: center;
+}
+#header #details ul {
+  background: #2ecc71;
+  font-size: 24px;
+  list-style: none;
+  margin: 0 30px;
+  padding: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+#header #details ul li {
+  line-height: 140%;
+  margin: 0;
+  padding: 15px 0;
+  text-align: center;
+}
+#header #details ul li:before {
+  font-family: 'ossfont';
+  font-weight: normal;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  font-size: 28px;
+  line-height: 140%;
+  margin-right: 15px;
+}
+#header #details ul li.where:before {
+  content: 'p';
+}
+#header #details ul li.when {
+  border-bottom: 2px solid #2bc06a;
+}
+#header #details ul li.when:before {
+  content: 'c';
+}
+body.en {
+  font-size: 16px;
+}
+body.en h1 {
+  font-size: 28px;
+}
+body.en h2 {
+  font-size: 26px;
+}
+body.en h3 {
+  font-size: 20px;
+}
+body.en h4 {
+  font-size: 16px;
+}
+body.en #header #home {
+  font-size: 20px;
+  line-height: 120%;
+}
+body.en #header #home span {
+  font-size: 48px;
+  line-height: 120%;
 }
 /* Content */
 #content .post {
@@ -555,7 +647,7 @@ a.active {
   background-clip: padding-box;
 }
 #content .post .time {
-  color: #354b60;
+  color: #3e5771;
 }
 #content #archive {
   list-style: none;
