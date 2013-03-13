@@ -9,10 +9,9 @@ switch: {en: "<a href='/'>中文</a>", cn: "<a href='/en.html'>en</a>"}
 name: {en: "Shanghai <span>Open Source</span> Meetup", cn: "上海<span>开源</span>聚会"}
 description: {en: "Meet the Open Source community", cn: "开源爱好者的专业交流平台" }
 details: {
-	en: { day: "February 7, 2009", time: "from 2:00 PM", addr: "666 Fuzhou road, Shanghai" },
-	cn: { day: "2009年2月7日", time: "下午2点开始", addr: "福州路666弄, 上海" }
+	en: { day: "March 16, 2013", time: "from 2:00 PM", addr: "666 Fuzhou road, Shanghai" },
+	cn: { day: "2013年3月16日", time: "下午2点开始", addr: "上海市 福州路666号 金陵海欣大厦" }
 }
-
 
 # url: http://wiredcraft.github.com/foundation
 # ga: 'UA-XXXXXXX-X'
