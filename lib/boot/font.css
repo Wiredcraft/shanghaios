@@ -27,7 +27,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"]:before {
 */
-.icon-sina-weibo:before, .icon-twitter:before, .icon-mail:before, .icon-clock:before, .icon-location:before {
+.icon-mail:before, .icon-clock:before, .icon-location:before, .icon-twitter:before, .icon-sina-weibo:before, .icon-rss:before {
 	font-family: 'ossfont';
 	speak: none;
 	font-style: normal;
@@ -37,18 +37,21 @@ you can use the generic selector below, but it's slower:
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 }
-.icon-sina-weibo:before {
-	content: "\73";
-}
-.icon-twitter:before {
-	content: "\74";
-}
 .icon-mail:before {
-	content: "\6d";
+	content: "\6e";
 }
 .icon-clock:before {
 	content: "\63";
 }
 .icon-location:before {
 	content: "\70";
+}
+.icon-twitter:before {
+	content: "\74";
+}
+.icon-sina-weibo:before {
+	content: "\77";
+}
+.icon-rss:before {
+	content: "\72";
 }

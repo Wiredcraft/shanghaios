@@ -478,7 +478,8 @@ a.active {
 }
 #links li.twitter,
 #links li.weibo,
-#links li.newsletter {
+#links li.newsletter,
+#links li.rss {
   font-family: 'ossfont';
   font-weight: normal;
   speak: none;
