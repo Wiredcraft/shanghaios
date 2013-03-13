@@ -217,13 +217,13 @@ body.en {
   font-size: 16px;
 }
 body.en h1 {
-  font-size: 28px;
-}
-body.en h2 {
   font-size: 26px;
 }
+body.en h2 {
+  font-size: 24px;
+}
 body.en h3 {
-  font-size: 20px;
+  font-size: 18px;
 }
 body.en h4 {
   font-size: 16px;
@@ -235,6 +235,7 @@ body.en #header #home {
 body.en #header #home span {
   font-size: 48px;
   line-height: 120%;
+  margin: 10px 0;
 }
 /* Content */
 #content .post {
