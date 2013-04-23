@@ -10,4 +10,4 @@ This month event will be held at No.666 Fuzhou road, Shanghai Jinling Hyperbond 
 
 We welcome participants to enthusiastically take office to discuss and communicate with everyone. Whether you have a question to ask or want some  advice, you will leave with a greater knowledge. 
 
-Visit the [Weibo activities page](http://event.weibo.com/809509) for registration now!
+Visit the [Weibo activities page](http://event.weibo.com/826109) for registration now!
