@@ -9,7 +9,7 @@ We are holding a monthly meetup for open source enthusiasts. We hope our activit
 This month event will be held at No.666 Fuzhou road, Shanghai Jinling Hyperbond Building. We retain the same format as the last meetup, starting with pure technical presentation about one hour (the presentation for this time will be about 'D language' by Lionello - Senior Software Engineer at Microsoft China), then having a quick Q&A by half an hour. this will take about 1+ hours. After a short break, we have prepared some great practical value Workshops to share with you the most useful technology exchange in a more hands-on fashion. We are confident you will bring your experience to share with everyone attending.
 
 We welcome participants to enthusiastically take office to discuss and communicate with everyone. Whether you have a question to ask or want some advice, you will leave with a greater knowledge.
-Visit the Weibo activities page for registration now!
+Visit the [Weibo](http://event.weibo.com/826109) activities page for registration now!
  
 &#149; Abstract
 
