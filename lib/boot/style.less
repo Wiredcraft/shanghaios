@@ -146,7 +146,6 @@ a.active {
     font-size: 22px;
     line-height: 160%;
     text-align: center;
-    width: @column;
     &:hover,
     &:active {
       background: lighten(@green, 5%);
@@ -155,23 +154,19 @@ a.active {
     span {
       color: #fff;
       display: block;
-      font-size: 66px;
       line-height: 160%;
     }
   }
   #details {
     background: darken(@green, 3%);
     .border-radius(3px, 3px, 0, 0);
-    width: @column * 2;
     h1 {
       color: darken(@green, 15%);
       text-align: center;
     }
     ul {
       background: @green;
-      font-size: 24px;
       list-style: none;
-      margin: 0 30px;
       padding: 0;
       .rounded(3px);
       li {
@@ -181,7 +176,6 @@ a.active {
         text-align :center;
         &:before {
           .icon();
-          font-size: 28px;
           line-height: 140%;
           margin-right: 15px;
         }
@@ -222,6 +216,16 @@ body.en {
         line-height: 120%;
       }
     }
+    #details {
+      ul {
+        font-size: 24px;
+        li {
+          &:before {
+            font-size: 28px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -243,3 +247,84 @@ body.en {
   }
 }
 
+@media (max-width: 960px) {
+  #links {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  #header {
+    #home {
+      width: @column;
+      span {
+        font-size: 66px;
+      }
+    }
+    #details {
+      width: @column * 2;
+      ul {
+        font-size: 23px;
+        margin: 0 30px;
+      }
+    }
+  }
+  p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  #header {
+    width: 100%;
+  }
+    #home {
+      width: 33.33333333%;
+      span {
+        font-size: 66px;
+      }
+    }
+    #details {
+      width: 66.66666666%;
+      h1 {
+        font-size: 26px;
+        margin-bottom: 28px;
+      }
+      ul {
+        margin: 0 30px;
+        font-size: 20px;
+        li:before {
+          font-size: 16px;
+        }
+      }
+    }
+}
+
+@media (max-width: 480px) {
+  #header {
+    width: 100%;
+  }
+    #home {
+      width: 33.33333333%;
+      span {
+        font-size: 60px;
+      }
+    }
+    #details {
+      width: 66.66666666%;
+      h1 {
+        font-size: 20px;
+        margin-bottom: 28px;
+      }
+      ul {
+        margin: 0 20px;
+        font-size: 16px;
+        li:before {
+          font-size: 14px;
+        }
+      }
+    }
+  p {
+    font-size: 14px;
+  }
+}

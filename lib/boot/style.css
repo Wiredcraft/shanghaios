@@ -140,7 +140,6 @@ a.active {
   font-size: 22px;
   line-height: 160%;
   text-align: center;
-  width: 240px;
 }
 #header #home:hover,
 #header #home:active {
@@ -150,7 +149,6 @@ a.active {
 #header #home span {
   color: #fff;
   display: block;
-  font-size: 66px;
   line-height: 160%;
 }
 #header #details {
@@ -170,7 +168,6 @@ a.active {
   -moz-background-clip: padding-box;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  width: 480px;
 }
 #header #details h1 {
   color: #208e4e;
@@ -178,9 +175,7 @@ a.active {
 }
 #header #details ul {
   background: #2ecc71;
-  font-size: 24px;
   list-style: none;
-  margin: 0 30px;
   padding: 0;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -200,7 +195,6 @@ a.active {
   font-weight: normal;
   speak: none;
   -webkit-font-smoothing: antialiased;
-  font-size: 28px;
   line-height: 140%;
   margin-right: 15px;
 }
@@ -236,6 +230,12 @@ body.en #header #home span {
   font-size: 48px;
   line-height: 120%;
 }
+body.en #header #details ul {
+  font-size: 24px;
+}
+body.en #header #details ul li:before {
+  font-size: 28px;
+}
 /* Content */
 #content .post {
   background: #233140;
@@ -255,4 +255,80 @@ body.en #header #home span {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+@media (max-width: 960px) {
+  #links {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  #header #home {
+    width: 240px;
+  }
+  #header #home span {
+    font-size: 66px;
+  }
+  #header #details {
+    width: 480px;
+  }
+  #header #details ul {
+    font-size: 23px;
+    margin: 0 30px;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  #header {
+    width: 100%;
+  }
+  #home {
+    width: 33.33333333%;
+  }
+  #home span {
+    font-size: 66px;
+  }
+  #details {
+    width: 66.66666666%;
+  }
+  #details h1 {
+    font-size: 26px;
+    margin-bottom: 28px;
+  }
+  #details ul {
+    margin: 0 30px;
+    font-size: 20px;
+  }
+  #details ul li:before {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  #header {
+    width: 100%;
+  }
+  #home {
+    width: 33.33333333%;
+  }
+  #home span {
+    font-size: 60px;
+  }
+  #details {
+    width: 66.66666666%;
+  }
+  #details h1 {
+    font-size: 20px;
+    margin-bottom: 28px;
+  }
+  #details ul {
+    margin: 0 20px;
+    font-size: 16px;
+  }
+  #details ul li:before {
+    font-size: 14px;
+  }
+  p {
+    font-size: 14px;
+  }
 }
