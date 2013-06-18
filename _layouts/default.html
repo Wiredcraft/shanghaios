@@ -22,23 +22,15 @@
   <link href='{{ site.url }}/assets.css' rel='stylesheet' type='text/css'/>
 </head>
 <body class='{{ lang }}'>
-    
-  
+  <nav id='links'>
+    <ul>
+      <li class='language'>{{ switch }}</li>
+      <li class='twitter'><a href='http://twitter.com/ShanghaiOs' target='_blank'>t</a></li>
+      <li class='weibo'><a href='http://www.weibo.com/u/2987642162' target='_blank'>w</a></li>
+    </ul>
+  </nav>
 
-  <header id='header'>
-    <div class='content'>
-      <nav class='links'>
-        <ul>
-          <li class='twitter'><a href='http://twitter.com/ShanghaiOs' target='_blank'>t</a></li>
-          <li class='weibo'><a href='http://www.weibo.com/u/2987642162' target='_blank'>t</a></li>
-          <li class='newsletter'>{% include newsletter.html %}</li>
-          <li class='language'>{{ switch }}</li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <section id='hero'>
+  <header id='hero'>
     <div class='content'>
       <a href='{{ site.url }}{{ home }}' id='home' class='logo'><img src='/images/logo.png' alt='{{ name }}' title='{{ name }}'/></a>
 
@@ -48,8 +40,10 @@
         <li class='when'>{{ site.details.[page.lang].day }}, {{ site.details.[page.lang].time }}</li>
         <li class='where'>{{ site.details.[page.lang].addr }}</li>
       </ul>
+
+      
     </div>
-  </section>
+  </header>
 
   <section id='content'>
     <div class='content'>

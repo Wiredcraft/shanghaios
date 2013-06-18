@@ -62,53 +62,118 @@ a.active {
   width: 700px;
   text-align: left;
 }
-/* HEADER */
-#header {
-  background: #233140;
+/* LINKS */
+#links {
+  position: absolute;
+  right: 30px;
+  top: 30px;
 }
-#header .links * {
-  display: inline;
+#links ul,
+#links li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-#header .links li.newsletter:before {
-  content: 'm';
+#links li.language {
+  font-weight: ;
+  text-transform: uppercase;
 }
-#header .links li.weibo:before {
-  content: 'w';
-}
-#header .links li.twitter:before {
-  content: 't';
-}
-#header .links li:before {
+#links li.twitter,
+#links li.weibo {
   font-family: 'ossfont';
   font-weight: normal;
   speak: none;
   -webkit-font-smoothing: antialiased;
-  color: #2ecc71;
-  font-size: 24px;
-  margin-right: 10px;
+  font-size: 26px;
 }
-/* HERO */
-#hero {
+#links a {
+  background: #233140;
+  color: #3e5771;
+  display: block;
+  margin-bottom: 15px;
+  padding: 15px 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  width: 60px;
+}
+#links a:hover {
+  background: #2ecc71;
+  color: #fff;
+  text-decoration: none;
+}
+/* HEADER */
+#hero .content {
   text-align: center;
+  text-shadow: 0 2px 0 #233140;
 }
 #hero .logo,
 #hero .logo img {
   display: block;
   margin: 0 auto;
 }
-#hero .details li.where:before {
-  content: 'p';
+#hero .logo {
+  margin-bottom: 60px;
+}
+#hero .details {
+  background: #233140;
+  color: #fff;
+  font-size: 24px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  width: 500px;
+}
+#hero .details h1 {
+  margin-bottom: 40px;
+}
+#hero .details ul,
+#hero .details li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#hero .details li {
+  padding: 20px;
 }
 #hero .details li.when:before {
   content: 'c';
+}
+#hero .details li.where:before {
+  content: 'p';
 }
 #hero .details li:before {
   font-family: 'ossfont';
   font-weight: normal;
   speak: none;
   -webkit-font-smoothing: antialiased;
+  margin-right: 10px;
+  padding: 15px;
 }
 /* CONTENT */
-#content {
-  background: #233140;
+#content,
+#archive li {
+  border-top: 1px solid #233140;
+}
+#archive,
+#archive li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#archive li {
+  margin-top: 20px;
+  padding-top: 20px;
+}
+#content .time {
+  color: #507192;
 }

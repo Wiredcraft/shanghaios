@@ -83,56 +83,114 @@ a.active {
   text-align: left;
 }
 
-/* HEADER */
+/* LINKS */
 
-#header {
-  background: darken(@main, 5%);
-  .links {
-    * {
-      display: inline;
+#links {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  ul,
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    &.language {
+      font-weight: ;
+      text-transform: uppercase;
     }
-    li.newsletter:before {
-      content: 'm';
-    }
-    li.weibo:before {
-      content: 'w';
-    }
-    li.twitter:before {
-      content: 't';
-    }
-    li:before {
+    &.twitter,
+    &.weibo {
       .icon();
-      color: @green;
-      font-size: 24px;
-      margin-right: 10px;
+      font-size: 26px;
+    }
+  }
+  a {
+    background: darken(@main, 5%);
+    color: lighten(@main, 10%);
+    display: block;
+    margin-bottom: 15px;
+    padding: 15px 0;
+    .rounded(3px);
+    width: 60px;
+    &:hover {
+      background: @green;
+      color: #fff;
+      text-decoration: none;
     }
   }
 }
 
-/* HERO */
+/* HEADER */
 
 #hero {
-  text-align: center;
+  .content {
+    text-align: center;
+    text-shadow: 0 2px 0 darken(@main, 5%);
+  }
   .logo,
   .logo img {
     display: block;
     margin: 0 auto;
   }
+  .logo {
+    margin-bottom: 60px;
+  }
   .details {
-    li.where:before {
-      content: 'p';
+    background: darken(@main, 5%);
+    color: #fff;
+    font-size: 24px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+    .rounded(3px);
+    width: 500px;
+    h1 {
+      margin-bottom: 40px;
+    }
+    ul,
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      padding: 20px;
     }
     li.when:before {
       content: 'c';
     }
+    li.where:before {
+      content: 'p';
+    }
     li:before {
       .icon();
+      margin-right: 10px;
+      padding: 15px;
     }
   }
 }
 
 /* CONTENT */
 
-#content {
-  background: darken(@main, 5%);
+#content,
+#archive li {
+  border-top: 1px solid darken(@main, 5%);
+}
+
+#archive,
+#archive li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#archive li {
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+#content .time {
+  color: lighten(@main, 20%);
 }
