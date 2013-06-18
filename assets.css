@@ -516,6 +516,7 @@ a.active {
 #hero .logo {
   margin-bottom: 60px;
 }
+<<<<<<< HEAD
 #hero .details {
   background: #233140;
   color: #fff;
@@ -523,6 +524,14 @@ a.active {
   margin: 0 auto;
   padding: 20px;
   text-align: left;
+=======
+#header #details ul {
+  background: #2ecc71;
+  font-size: 23px;
+  list-style: none;
+  margin: 0 30px;
+  padding: 0;
+>>>>>>> de6949ff7c1c28a90b79a06f47f6db0cd764439a
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -531,8 +540,27 @@ a.active {
   background-clip: padding-box;
   width: 500px;
 }
+<<<<<<< HEAD
 #hero .details h1 {
   margin-bottom: 40px;
+=======
+#header #details ul li {
+  line-height: 140%;
+  margin: 0;
+  padding: 15px 0;
+  text-align: center;
+}
+#header #details ul li:before {
+  font-family: 'ossfont';
+  font-weight: normal;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  font-size: 28px;
+  line-height: 100%;
+  margin-right: 10px;
+  position: relative;
+  top: 3px;
+>>>>>>> de6949ff7c1c28a90b79a06f47f6db0cd764439a
 }
 #hero .details ul,
 #hero .details li {
