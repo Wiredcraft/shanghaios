@@ -10,3 +10,5 @@ layout: default
 * <time datetime='{{ page.date | xmlschema }}'>{{ post.date | date: '%B %d, %Y' }}</time>
 ### [{{ post.title }}]({{ site.url }}{{ post.url }})
 {% endfor %}
+
+<a href='/atom.xml' class=''>r</a>

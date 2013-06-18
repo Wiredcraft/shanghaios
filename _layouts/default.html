@@ -22,33 +22,40 @@
   <link href='{{ site.url }}/assets.css' rel='stylesheet' type='text/css'/>
 </head>
 <body class='{{ lang }}'>
-  <nav id='links'>
-    <ul>
-      <li class='language'>{{ switch }}</li>
-      <li class='twitter'><a href='http://twitter.com/ShanghaiOs' target='_blank'>t</a></li>
-      <li class='weibo'><a href='http://www.weibo.com/u/2987642162' target='_blank'>w</a></li>
-      <li class='newsletter'><a href='http://eepurl.com/o9bBz' target='_blank'>n</a></li>
-      <li class='rss'><a href='/atom.xml'>r</a></li>
-    </ul>
-  </nav>
+    
   
-  <header id='header'>
-    <a href='{{ site.url }}{{ home }}' id='home' class='section'>{{ name }}</a>
 
-    <div id='details' class='section'>
+  <header id='header'>
+    <div class='content'>
+      <nav class='links'>
+        <ul>
+          <li class='twitter'><a href='http://twitter.com/ShanghaiOs' target='_blank'>t</a></li>
+          <li class='weibo'><a href='http://www.weibo.com/u/2987642162' target='_blank'>t</a></li>
+          <li class='newsletter'>{% include newsletter.html %}</li>
+          <li class='language'>{{ switch }}</li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id='hero'>
+    <div class='content'>
+      <a href='{{ site.url }}{{ home }}' id='home' class='logo'><img src='/images/logo.png' alt='{{ name }}' title='{{ name }}'/></a>
+
       <h1>{{ site.description.[page.lang] }}</h1>
-      <ul>
+      
+      <ul class='details'>
         <li class='when'>{{ site.details.[page.lang].day }}, {{ site.details.[page.lang].time }}</li>
         <li class='where'>{{ site.details.[page.lang].addr }}</li>
       </ul>
     </div>
-  </header>
+  </section>
 
   <section id='content'>
-    {{ content }}
+    <div class='content'>
+      {{ content }}
+    </div>
   </section>
-  
-  <footer id='footer'>{{  }}</footer>
   
   <!-- JS -->
   <!--[if lt IE 9]><script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script><![endif]-->
