@@ -1,14 +1,9 @@
 @import 'less/elements.less';
 
-@main: #2C3E50;
+@main: #2c3e50;
 @green: #2ECC71;
-@red: #DE5027;
-@orange: #1ABC9C;
-@blue: #3498DB;
-@grey: #ECF0F1;
 
-@column: 240px;
-@width: @column * 3;
+@width: 700px;
 
 /* ossfont */
 @font-face {
@@ -32,9 +27,8 @@
 /* General */
 body {
   background: @main;
-  color: #fff;
+  color: lighten(@main, 70%);
   font: 18px/160% 'Open Sans', Arial, Helvetica, sans-serif;
-  padding: 30px;
   text-align: center;
 }
 
@@ -42,6 +36,7 @@ h1,
 h2,
 h3,
 h4 {
+  color: @green;
   font-weight: normal;
   margin: 0 0 20px;
 }
@@ -81,14 +76,15 @@ a.active {
   color: lighten(@green, 10%);
 }
 
-#header,
-#content {
+.content {
   margin: 0 auto;
-  max-width: @width;
+  padding: 40px 0;
+  width: @width;
   text-align: left;
 }
 
-/* LANGUAGE SWITCH */
+/* LINKS */
+
 #links {
   position: absolute;
   right: 30px;
@@ -105,9 +101,7 @@ a.active {
       text-transform: uppercase;
     }
     &.twitter,
-    &.weibo,
-    &.newsletter,
-    &.rss {
+    &.weibo {
       .icon();
       font-size: 26px;
     }
@@ -129,121 +123,74 @@ a.active {
 }
 
 /* HEADER */
-#header {
-  display: block;
-  height: @column;
-  margin-bottom: 30px;
-  .section {
-    background: @green;
-    display: block;
-    float: left;
-    height: @column - 60;
-    padding: 30px 0;
-  }
-  #home {
-    background: @green;
-    .border-radius(0, 0, 3px, 3px);
-    color: darken(@green, 15%);
-    font-size: 22px;
-    line-height: 160%;
+
+#hero {
+  .content {
     text-align: center;
-    width: @column;
-    &:hover,
-    &:active {
-      background: lighten(@green, 5%);
-      text-decoration: none;
-    }
-    span {
-      color: #fff;
-      display: block;
-      font-size: 66px;
-      line-height: 160%;
-    }
+    text-shadow: 0 2px 0 darken(@main, 5%);
   }
-  #details {
-    background: darken(@green, 3%);
-    .border-radius(3px, 3px, 0, 0);
-    width: @column * 2;
-    h1 {
-      color: darken(@green, 15%);
-      text-align: center;
-    }
-    ul {
-      background: @green;
-      font-size: 23px;
-      list-style: none;
-      margin: 0 30px;
-      padding: 0;
-      .rounded(3px);
-      li {
-        line-height: 140%;
-        margin: 0;
-        padding: 15px 0;
-        text-align :center;
-        &:before {
-          .icon();
-          font-size: 28px;
-          line-height: 100%;
-          margin-right: 10px;
-          position: relative;
-          top: 3px;          
-        }
-        &.where:before {
-          content: 'p';
-        }
-        &.when {
-          border-bottom: 2px solid darken(@green, 3%);;
-          &:before {
-            content: 'c';
-          }
-        }
-      }
-    }
+  .logo,
+  .logo img {
+    display: block;
+    margin: 0 auto;
   }
-}
-
-body.en {
-  font-size: 16px;
-  h1 {
-    font-size: 26px;
+  .logo {
+    margin-bottom: 60px;
   }
-  h2 {
-    font-size: 24px;
-  }
-  h3 {
-    font-size: 18px;
-  }
-  h4 {
-    font-size: 16px;
-  }
-  #header {
-    #home {
-      font-size: 20px;
-      line-height: 120%;
-      span {
-        font-size: 48px;
-        line-height: 120%;
-        margin: 10px 0;
-      }
-    }
-  }
-}
-
-/* Content */
-#content {
-  .post {
+  .details {
     background: darken(@main, 5%);
-    margin-bottom: 30px;
-    padding: 30px;
+    color: #fff;
+    font-size: 24px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
     .rounded(3px);
-    .time {
-      color: lighten( @main, 10%);
+    width: 500px;
+    h1 {
+      margin-bottom: 40px;
     }
-  }
-  #archive {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    ul,
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      padding: 20px;
+    }
+    li.when:before {
+      content: 'c';
+    }
+    li.where:before {
+      content: 'p';
+    }
+    li:before {
+      .icon();
+      margin-right: 10px;
+      padding: 15px;
+    }
   }
 }
 
+/* CONTENT */
+
+#content,
+#archive li {
+  border-top: 1px solid darken(@main, 5%);
+}
+
+#archive,
+#archive li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#archive li {
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+#content .time {
+  color: desaturate(lighten(@main, 40%), 10%);
+}
