@@ -4,7 +4,7 @@ pygments: true
 safe: false
 
 title: {en: "ShanghaiOS", cn: "上海开源聚会"}
-home: {en: "/en.html", cn: "/"}
+home: {en: "http://wiredcraft.com/shanghaios/en.html", cn: "http://wiredcraft.com/shanghaios/"}
 switch: {en: "<a href='/'>中文</a>", cn: "<a href='/en.html'>en</a>"}
 name: {en: "Shanghai <span>Open Source</span> Meetup", cn: "上海<span>开源</span>聚会"}
 description: {en: "Meet the Open Source community", cn: "开源爱好者的专业交流平台" }
