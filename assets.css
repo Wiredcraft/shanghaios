@@ -505,6 +505,7 @@ a.active {
 }
 /* HEADER */
 #hero .content {
+  background: #233140;
   text-align: center;
   text-shadow: 0 2px 0 #233140;
 }
@@ -517,7 +518,6 @@ a.active {
   margin-bottom: 60px;
 }
 #hero .details {
-  background: #233140;
   color: #fff;
   font-size: 24px;
   margin: 0 auto;
